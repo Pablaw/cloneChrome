@@ -18,18 +18,31 @@
 // calculator.divide(4, 2);
 // calculator.powerOf(4, 2);
 
-const title = document.querySelector(".hello");
+const title = document.querySelector("h2");
 
-function superEventHandler () {
-  title.innerHTML = "The mouse is here!";
-  title.innerHTML = "The mouse is gone!";
-  title.innerHTML = "You just resized!";
-  if(event.button == 2) {
-    title.innerHTML = "That was a right click!"
+const superEventHandler = {
+  handleMouseEnter:
+  function () {
+  title.innerText = "The mouse is here!";
+  title.style.color = colors[0];
+  },
+  handleMouseLeave: 
+  function () {
+    title.innerText = "The mouse is gone!";
+  },
+  handleWindowResize:
+  function () {
+    title.innerText = "You just resized!";
+  },
+  handleRightClick: 
+  function () {
+    if(event.button == 2) {
+    title.innerText = "That was a right click!";
     }
-}
+  }
+};
 
-title.addEventListener("mouseenter", superEventHandler);
-title.addEventListener("mouseleave", superEventHandler);
-window.addEventListener("resize", superEventHandler);
-window.addEventListener("mousedown", superEventHandler);
+title.addEventListener("mouseenter", superEventHandler.handleMouseEnter);
+title.addEventListener("mouseleave", superEventHandler.handleMouseLeave);
+window.addEventListener("resize", superEventHandler.handleWindowResize);
+window.addEventListener("mousedown", superEventHandler.handleRightClick);
