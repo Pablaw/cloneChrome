@@ -18,8 +18,8 @@
 // calculator.divide(4, 2);
 // calculator.powerOf(4, 2);
 
-const title = document.querySelector("h2");
-
+/* const title = document.querySelector("h2");
+const colors = ["#01DFD7", ]
 const superEventHandler = {
   handleMouseEnter:
   function () {
@@ -42,7 +42,24 @@ const superEventHandler = {
   }
 };
 
+
 title.addEventListener("mouseenter", superEventHandler.handleMouseEnter);
 title.addEventListener("mouseleave", superEventHandler.handleMouseLeave);
 window.addEventListener("resize", superEventHandler.handleWindowResize);
-window.addEventListener("mousedown", superEventHandler.handleRightClick);
+window.addEventListener("mousedown", superEventHandler.handleRightClick); */
+
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const link = document.querySelector("a")
+
+function handleLinkClick(event) {
+  event.preventDefault();
+}
+link.addEventListener("click", handleLinkClick);
+
+function onLoginSubmit(event) {
+  event.preventDefault();
+  console.log(event);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);

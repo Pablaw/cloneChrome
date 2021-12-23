@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  span {
+    font-weight: bold;
+  }
+
+#changeBtn {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
