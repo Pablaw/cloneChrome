@@ -59,7 +59,8 @@ link.addEventListener("click", handleLinkClick);
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  console.log(event);
+  const newId = loginInput.value;
+  `${newId}`
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
