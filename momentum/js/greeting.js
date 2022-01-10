@@ -50,17 +50,16 @@ window.addEventListener("mousedown", superEventHandler.handleRightClick); */
 
 const loginForm = document.getElementById("login-form");
 const loginInput = loginForm.querySelector("input");
-const link = document.querySelector("a")
+const greeting = document.getElementById("greeting");
 
-function handleLinkClick(event) {
-  event.preventDefault();
-}
-link.addEventListener("click", handleLinkClick);
+const HIDDEN_CLASSNAME = "hidden"
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  const newId = loginInput.value;
-  `${newId}`
+  const userName = loginInput.value;
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${userName}`;
+  greeting.classList.toggle(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);

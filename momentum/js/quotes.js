@@ -1,43 +1,43 @@
 const quotes = [
     {
         quote: "A1 is quote example",
-        author: "Walt Disney1"
+        author: "Example1"
     },
     {
         quote: "B2 is quote example",
-        author: "Walt Disney2"
+        author: "Example2"
     },
     {
         quote: "C3 is quote example",
-        author: "Walt Disney3"
+        author: "Example3"
     },
     {
         quote: "D4 is quote example",
-        author: "Walt Disney4"
+        author: "Example4"
     },
     {
         quote: "E5 is quote example",
-        author: "Walt Disney5"
+        author: "Example5"
     },
     {
         quote: "F6 is quote example",
-        author: "Walt Disney6"
+        author: "Example6"
     },
     {
         quote: "G7 is quote example",
-        author: "Walt Disney7"
+        author: "Example7"
     },
     {
         quote: "H8 is quote example",
-        author: "Walt Disney8"
+        author: "Example8"
     },
     {
         quote: "I9 is quote example",
-        author: "Walt Disney9"
+        author: "Example9"
     },
     {
         quote: "J10 is quote example",
-        author: "Walt Disney10"
+        author: "Example10"
     }
 ]
 
