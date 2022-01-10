@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/greeting.js"></script>
     <script defer src="js/clock.js"></script>
     <script defer src="js/quotes.js"></script>
     <script defer src="js/background.js"></script>
     <script defer src="js/todo.js"></script>
+    <!-- <script defer src="js/weather.js"></script> -->
 </head>
 <body>
     <form id="login-form">
-   <input required maxlength="15" type="text" placeholder="What is your name?" />
-   <button>Log In</button>
+        <input required 
+                maxlength="15" 
+                type="text" 
+                placeholder="What is your name?" />
+        <button>Log In</button>
     </form>
+    <h1 id="greeting" class="hidden">h1</h1>
     <form id="todo-form">
         <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
@@ -27,7 +33,5 @@
         <span></span>
         <span></span>
    </div>
-
-<a href="https://nomadcoders.co">Go to courses</a>
 </body>
 </html>
