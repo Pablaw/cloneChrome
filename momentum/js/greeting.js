@@ -52,14 +52,29 @@ const loginForm = document.getElementById("login-form");
 const loginInput = loginForm.querySelector("input");
 const greeting = document.getElementById("greeting");
 
-const HIDDEN_CLASSNAME = "hidden"
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "user_name";
 
 function onLoginSubmit(event) {
   event.preventDefault();
   const userName = loginInput.value;
   loginForm.classList.add(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${userName}`;
+  localStorage.setItem(USERNAME_KEY, userName);
+  paintGreeting(userName);
+}
+
+function paintGreeting(username) {
+  greeting.innerText = `Hello ${username}`;
   greeting.classList.toggle(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if( savedUsername === null ) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${savedUsername}`;
+  greeting.classList.toggle(HIDDEN_CLASSNAME);
+}
