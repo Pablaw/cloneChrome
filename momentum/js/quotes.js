@@ -1,49 +1,49 @@
 const quotes = [
     {
-        quote: "A1 is quote example",
-        author: "Example1"
+        quote: "Your word is a lamp to my feet and a light for my path.",
+        chapter: "Psalms 119:105"
     },
     {
-        quote: "B2 is quote example",
-        author: "Example2"
+        quote: "For sin shall not be your master, because you are not under law, but under grace. ",
+        chapter: "Romans 6:14"
     },
     {
-        quote: "C3 is quote example",
-        author: "Example3"
+        quote: "Therefore, there is now no condemnation for those who are in Christ Jesus, because through Christ Jesus the law of the Spirit of life set me free from the law of sin and death.",
+        chapter: "Romans 8:1-2"
     },
     {
-        quote: "D4 is quote example",
-        author: "Example4"
+        quote: "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace and joy in the Holy Spirit,",
+        chapter: "Romans 14:17"
     },
     {
         quote: "E5 is quote example",
-        author: "Example5"
+        chapter: "Example5"
     },
     {
         quote: "F6 is quote example",
-        author: "Example6"
+        chapter: "Example6"
     },
     {
         quote: "G7 is quote example",
-        author: "Example7"
+        chapter: "Example7"
     },
     {
         quote: "H8 is quote example",
-        author: "Example8"
+        chapter: "Example8"
     },
     {
         quote: "I9 is quote example",
-        author: "Example9"
+        chapter: "Example9"
     },
     {
         quote: "J10 is quote example",
-        author: "Example10"
+        chapter: "Example10"
     }
 ]
-
+ 
 const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const chapter = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+chapter.innerText = todaysQuote.chapter;
