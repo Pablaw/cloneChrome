@@ -1,30 +1,21 @@
 const title = document.createElement("h1");
 title.innerText = "Hello!";
-document.body.appendChild(title);
+title.style.color = "white";
+document.body.prepend(title);
 
-const colors = ["#1BB48F", "#318CCF", "#DE574B", "#975FB0"];
-
-const superEventHandler = {
-  mouseEnter: function () {
-    title.innerText = "The mouse is here!";
-    title.style.color = colors[0];
-  },
-  mouseLeave: function () {
-    title.innerText = "The mouse is gone!";
-    title.style.color = colors[1];
-  },
-  rightClick: function (e) {
-    e.preventDefault();
-    title.innerText = "That was a right click!";
-    title.style.color = colors[2];
-  },
-  resize: function () {
-    title.innerText = "You just resized!";
-    title.style.color = colors[3];
+function resizeHandler() {
+  const width = window.outerWidth;
+  if (width > 1000) {
+    document.body.style.backgroundColor = "#FDB73D";
+  } else if (width > 800) {
+    document.body.style.backgroundColor = "#9555A7";
+  } else {
+    document.body.style.backgroundColor = "#0094D2";
   }
-};
+}
 
-title.addEventListener("mouseenter", superEventHandler.mouseEnter);
-title.addEventListener("mouseleave", superEventHandler.mouseLeave);
-document.addEventListener("contextmenu", superEventHandler.rightClick);
-window.addEventListener("resize", superEventHandler.resize);
+window.addEventListener("resize", resizeHandler);
+
+
+/* Submit Assignment 1
+https://codesandbox.io/s/ecstatic-wood-j3h5o?file=/src/index.js */
