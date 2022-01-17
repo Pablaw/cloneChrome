@@ -1,20 +1,32 @@
-const title = document.createElement("h1");
-title.innerText = "Hello!";
-title.style.color = "white";
-document.body.prepend(title);
+const input = document.getElementById("inputForm");
+const result = document.getElementById("resultForm");
+const limitInput = document.getElementById("limitNumber");
+const guessInput = document.getElementById("guessNumber");
+const play = document.getElementById("play");
 
-function resizeHandler() {
-  const width = window.outerWidth;
-  if (width > 1000) {
-    document.body.style.backgroundColor = "#FDB73D";
-  } else if (width > 800) {
-    document.body.style.backgroundColor = "#9555A7";
-  } else {
-    document.body.style.backgroundColor = "#0094D2";
+console.log(limitInput)
+function playHandler(event) {
+  event.preventDefault();
+  const inputValue = limitInput.value;
+  const guessValue = guessInput.value;
+  let arr = [];
+
+  for (let i = 0; i <= inputValue; i++) {
+    arr.push(i);
   }
+  if(guessValue === arr[i]) {
+    console.log("true")
+} else {
+    console.log("false");
+}
+  result.classList.remove("hidden");
+  const resultText = document.createElement("div");
+  resultText.innerText = `You choose: , the machine choose: .
+  You `;
+  result.prepend(resultText);
 }
 
-window.addEventListener("resize", resizeHandler);
+play.addEventListener("click", playHandler);
 
 
 /* Submit Assignment 1

@@ -4,20 +4,22 @@
 <head>
 	<title>Parcel Sandbox</title>
 	<meta charset="UTF-8" />
-    <script defer src="test.js"></script>
-    <link rel="stylesheet" href="test.css">
 </head>
 
 <body>
-
-
-    <div id="app"></div>
-
-    
-    
-	
-	
+	<form id="inputForm">
+		<h1>Random Number Game</h1>
+		<label for="limitNumber"><b>Generate a number between 0 and</b></label>
+		<input type="number" required id="limitNumber"></input>
+		<h3></h3>
+		<label for="guessNumber">Guess the number: </label>
+		<input type="number" required id="guessNumber"></input>
+		<button id="play">Play!</button>
+	</form>
+		<form id="resultForm" class="hidden">
+		</form>
+	<script src="test.js">
+	</script>
 </body>
 
 </html>
-

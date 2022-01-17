@@ -1,17 +1,7 @@
 body {
-    font-family: sans-serif;
-  }
-  
-  h1 {
-    font-weight: bold;
-  }
-  
-  span {
-    font-weight: bold;
-  }
+  font-family: sans-serif;
+}
 
-#changeBtn {
-  position: relative;
-  top: 50%;
-  left: 50%;
+.hidden {
+  display: none;
 }
