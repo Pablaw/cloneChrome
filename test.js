@@ -1,32 +1,41 @@
-const input = document.getElementById("inputForm");
+const inputForm = document.getElementById("input-Form");
 const result = document.getElementById("resultForm");
 const limitInput = document.getElementById("limitNumber");
 const guessInput = document.getElementById("guessNumber");
 const play = document.getElementById("play");
+const resultText = document.createElement("div");
 
-console.log(limitInput)
 function playHandler(event) {
   event.preventDefault();
   const inputValue = limitInput.value;
-  const guessValue = guessInput.value;
-  let arr = [];
+  const guessValue = Number(guessInput.value);
+  let numberArr = [];
 
   for (let i = 0; i <= inputValue; i++) {
-    arr.push(i);
+    numberArr.push(i);
   }
-  if(guessValue === arr[i]) {
-    console.log("true")
-} else {
-    console.log("false");
-}
-  result.classList.remove("hidden");
-  const resultText = document.createElement("div");
-  resultText.innerText = `You choose: , the machine choose: .
-  You `;
+
+  const macineValue = Math.floor(Math.random() * numberArr.length);
+  let answer = '';
+
+  const RESULTSTRING = `You choose: ${guessValue}, the machine choose: ${macineValue}.`;
+  const CLASSHIDDEN = result.classList.remove("hidden");
+
+    if(guessValue === macineValue) {
+        answer = "You win!";
+        resultText.innerText = `${RESULTSTRING}
+        ${answer}`;
+        CLASSHIDDEN;
+    } else {
+        answer = "You lost!";
+        resultText.innerText = `${RESULTSTRING}
+        ${answer}`;
+        CLASSHIDDEN;
+    }
   result.prepend(resultText);
 }
 
-play.addEventListener("click", playHandler);
+inputForm.addEventListener("submit", playHandler);
 
 
 /* Submit Assignment 1

@@ -7,13 +7,13 @@
 </head>
 
 <body>
-	<form id="inputForm">
+	<form id="input-Form">
 		<h1>Random Number Game</h1>
 		<label for="limitNumber"><b>Generate a number between 0 and</b></label>
-		<input type="number" required id="limitNumber"></input>
+		<input type="number" min="0" required id="limitNumber"></input>
 		<h3></h3>
 		<label for="guessNumber">Guess the number: </label>
-		<input type="number" required id="guessNumber"></input>
+		<input type="number" min="0" required id="guessNumber"></input>
 		<button id="play">Play!</button>
 	</form>
 		<form id="resultForm" class="hidden">
