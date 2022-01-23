@@ -1,10 +1,39 @@
 body {
-    background-color: beige;
+    transition: background-color 1s;
+}
+body.change {
+    transition: background-color 1s;
 }
  .hidden {
      display: none;
  }
 
  #clock {
-    
+    text-align: center;
+    font-size: 50px;
+    color: beige;
+    margin: 100px;
+ }
+
+#greeting {
+    color: beige;
+}
+
+ #main {
+     text-align: center;
+ }
+
+ #login-form button {
+     margin-top: 5px;
+     margin-bottom: 50px;
+ }
+
+ #weather {
+     color: beige;
+     font-size: 20px;
+ }
+
+ #todo-list {
+     list-style: none;
+     color: beige;
  }
