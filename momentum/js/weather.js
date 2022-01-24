@@ -20,4 +20,3 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
-
